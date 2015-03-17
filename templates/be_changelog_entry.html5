@@ -1,0 +1,7 @@
+<div class="<?= $this->strCssClass; ?>">
+    <h3><span style="color:#b3b3b3;">[<?= $this->strDate; ?>]</span> Version <?= $this->strVersion; ?></h3>
+    <ul>
+        <?= $this->strEntries; ?>
+    </ul>
+</div>
+<hr>
