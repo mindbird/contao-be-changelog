@@ -1,20 +1,30 @@
 <?php
 
 /**
+ * Contao Open Source CMS
+ *
+ * Copyright (c) 2005-2015 Leo Feyer
+ *
+ * @license LGPL-3.0+
+ */
+
+
+/**
  * Register the namespaces
  */
 ClassLoader::addNamespaces(array
 (
-    'BeChangelog',
+	'BeChangelog',
 ));
+
 
 /**
  * Register the classes
  */
 ClassLoader::addClasses(array
 (
-    // Modules
-    'BeChangelog\Hooks' => 'system/modules/be-changelog/Hooks.php',
+	// Classes
+	'BeChangelog\Hooks' => 'system/modules/be-changelog/classes/Hooks.php',
 ));
 
 
@@ -23,6 +33,6 @@ ClassLoader::addClasses(array
  */
 TemplateLoader::addFiles(array
 (
-    'be_changelog'           => 'system/modules/be-changelog/templates',
-    'be_changelog_entry'           => 'system/modules/be-changelog/templates',
+	'be_changelog'       => 'system/modules/be-changelog/templates',
+	'be_changelog_entry' => 'system/modules/be-changelog/templates',
 ));
