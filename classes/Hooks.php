@@ -9,12 +9,13 @@ class Hooks extends \Backend
         $objUser = \BackendUser::getInstance();
 
         if ($GLOBALS['TL_CONFIG']['be_changelog_src'] == '') {
-            return;
+            return '';
         }
+
         $strFile = file_get_contents($GLOBALS['TL_CONFIG']['be_changelog_src']);
 
-        if (!$strFile) {
-            return;
+        if ($strFile == '') {
+            return '';
         }
         $objJson = json_decode($strFile);
 
@@ -26,7 +27,7 @@ class Hooks extends \Backend
             $objTemplateEntry->strCssClass = $objUser->lastLogin > $objEntry->timestamp ? '' : ' tl_info';
             $objTemplateEntry->strDate = \Date::parse(\Config::get('datimFormat'), $objEntry->timestamp);
             $objTemplateEntry->strVersion = $objEntry->version;
-            $objTemplateEntry->strEntries = '<li>' . implode('</li><li>', $objEntry->entries) . '</li>';
+            $objTemplateEntry->strEntries = '<li style="padding-bottom: 5px;">' . implode('</li><li style="padding-bottom: 5px;">', $objEntry->entries) . '</li>';
             $arrEntries[$objEntry->timestamp] = $objTemplateEntry->parse();
         }
         krsort($arrEntries);

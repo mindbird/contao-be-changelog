@@ -17,7 +17,6 @@ ClassLoader::addNamespaces(array
 	'BeChangelog',
 ));
 
-
 /**
  * Register the classes
  */
@@ -26,7 +25,6 @@ ClassLoader::addClasses(array
 	// Classes
 	'BeChangelog\Hooks' => 'system/modules/be-changelog/classes/Hooks.php',
 ));
-
 
 /**
  * Register the templates
