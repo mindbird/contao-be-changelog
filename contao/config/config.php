@@ -1,3 +1,3 @@
 <?php
 
-$GLOBALS['TL_HOOKS']['getSystemMessages'][] = array('BeChangelog\Hooks', 'addSystemMessages');
+$GLOBALS['TL_HOOKS']['getSystemMessages'][] = array('BeChangelog\BeChangelog', 'addSystemMessages');
