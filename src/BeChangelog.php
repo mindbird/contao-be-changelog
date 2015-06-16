@@ -2,7 +2,7 @@
 
 namespace BeChangelog;
 
-class Hooks extends \Backend
+class BeChangelog extends \Backend
 {
     public function addSystemMessages()
     {

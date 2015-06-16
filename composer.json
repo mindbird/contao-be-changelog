@@ -18,8 +18,16 @@
   "extra": {
     "contao": {
       "sources": {
-        "src/system/modules/be-changelog": "system/modules/be-changelog"
+        "contao": "system/modules/be-changelog"
       }
     }
+  },
+  "autoload": {
+    "psr-4": {
+      "BeChangelog\\": "src/"
+    }
+  },
+  "replace": {
+    "contao-legacy/be-changelog": "self.version"
   }
 }
